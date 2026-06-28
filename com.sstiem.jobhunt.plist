@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.sstiem.jobhunt</string>
+
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine/scripts/run.sh</string>
+    </array>
+
+    <key>WorkingDirectory</key>
+    <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine</string>
+
+    <!-- refresh the Leadboard every 12 hours (job posts don't move faster than that; polite to sources) -->
+    <key>StartInterval</key>
+    <integer>43200</integer>
+
+    <!-- run once immediately when loaded, so it's live the moment you install it -->
+    <key>RunAtLoad</key>
+    <true/>
+
+    <key>StandardOutPath</key>
+    <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine/data/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine/data/launchd.err.log</string>
+
+    <!-- pass through Gmail creds IF you've exported them in your login shell; otherwise reply-watch
+         stays a no-op. The engine never stores the secret — launchd just forwards your env value. -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>PATH</key>
+        <string>/Users/digitaloutbreak/.local/bin:/usr/local/bin:/usr/bin:/bin</string>
+    </dict>
+</dict>
+</plist>
