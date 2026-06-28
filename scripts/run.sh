@@ -4,7 +4,7 @@
 set -uo pipefail
 
 export PATH="/Users/digitaloutbreak/.local/bin:/usr/local/bin:/usr/bin:/bin"
-ENGINE="/Users/digitaloutbreak/Developer/job-search/jobhunt-engine"
+ENGINE="/Users/digitaloutbreak/Developer/sstiempro/domains/jobhunt"
 LOG="$ENGINE/data/cron.log"
 
 cd "$ENGINE" || exit 1

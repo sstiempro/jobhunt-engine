@@ -8,11 +8,11 @@
     <key>ProgramArguments</key>
     <array>
         <string>/bin/bash</string>
-        <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine/scripts/run.sh</string>
+        <string>/Users/digitaloutbreak/Developer/sstiempro/domains/jobhunt/scripts/run.sh</string>
     </array>
 
     <key>WorkingDirectory</key>
-    <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine</string>
+    <string>/Users/digitaloutbreak/Developer/sstiempro/domains/jobhunt</string>
 
     <!-- refresh the Leadboard every 12 hours (job posts don't move faster than that; polite to sources) -->
     <key>StartInterval</key>
@@ -23,9 +23,9 @@
     <true/>
 
     <key>StandardOutPath</key>
-    <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine/data/launchd.out.log</string>
+    <string>/Users/digitaloutbreak/Developer/sstiempro/domains/jobhunt/data/launchd.out.log</string>
     <key>StandardErrorPath</key>
-    <string>/Users/digitaloutbreak/Developer/job-search/jobhunt-engine/data/launchd.err.log</string>
+    <string>/Users/digitaloutbreak/Developer/sstiempro/domains/jobhunt/data/launchd.err.log</string>
 
     <!-- pass through Gmail creds IF you've exported them in your login shell; otherwise reply-watch
          stays a no-op. The engine never stores the secret — launchd just forwards your env value. -->
